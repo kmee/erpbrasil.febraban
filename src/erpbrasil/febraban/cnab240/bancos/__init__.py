@@ -2,7 +2,9 @@
 import os
 import importlib
 
-from cnab240.registro import Registros
+from ..registro import Registros
+
+excluded_dirs = ['__pycache__']
 
 cwd = os.path.abspath(os.path.dirname(__file__))
 nome_bancos = (fname for fname in os.listdir(cwd)
